@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard de Análise de Vendas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Dashboard de Análise de Vendas</h1>
+    <button id="toggleThemeBtn">Modo Dark</button>
+  </header>
+
+  <section class="filters">
+    <label>
+      Mês:
+      <select id="monthFilter">
+        <option value="all">Todos</option>
+        <option value="2025-01">Janeiro 2025</option>
+        <option value="2025-02">Fevereiro 2025</option>
+        <option value="2025-03">Março 2025</option>
+      </select>
+    </label>
+
+    <label>
+      Categoria:
+      <select id="categoryFilter">
+        <option value="all">Todas</option>
+        <option value="Eletrônicos">Eletrônicos</option>
+        <option value="Vestuário">Vestuário</option>
+        <option value="Alimentos">Alimentos</option>
+      </select>
+    </label>
+  </section>
+
+  <section class="summary">
+    <div>Total de Vendas: <span id="totalSales">0</span></div>
+    <div>Média por Dia: <span id="avgSales">0</span></div>
+    <div>Maior Venda: <span id="maxSale">0</span></div>
+  </section>
+
+  <section class="charts">
+    <canvas id="salesBarChart"></canvas>
+    <canvas id="salesPieChart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
